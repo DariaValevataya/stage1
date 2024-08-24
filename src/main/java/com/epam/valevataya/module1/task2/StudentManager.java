@@ -1,15 +1,15 @@
 package com.epam.valevataya.module1.task2;
 
-import com.epam.valevataya.module1.task2.exception.StudentException;
+import com.epam.valevataya.module1.task2.exception.StudentNotFoundException;
 
 public class StudentManager {
 
   private static final long[] IDs = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
-  public Student find(long studentID) throws StudentException {
+  public Student find(long studentID) throws StudentNotFoundException {
     Student student = Student.getValueOf(studentID);
     if (student == null) {
-      throw new StudentException("Could not find student with ID " + studentID);
+      throw new StudentNotFoundException("Could not find student with ID " + studentID);
     }
     return student;
   }
@@ -21,7 +21,7 @@ public class StudentManager {
         Student student = manager.find(IDs[i]);
         System.out.println("Student " + student.getId() + " name " + student.getName());
       }
-    } catch (StudentException ex) {
+    } catch (StudentNotFoundException ex) {
       System.out.println(ex.getMessage());
     }
   }
