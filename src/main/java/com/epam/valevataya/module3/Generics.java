@@ -1,8 +1,7 @@
 package com.epam.valevataya.module3;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
 
 public class Generics {
   public List<List<String>> boxingMethod(String name) {
