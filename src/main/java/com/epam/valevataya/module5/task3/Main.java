@@ -19,8 +19,9 @@ public class Main {
     numberList2.add(List.of(3, 4, 5, 6, 44, 5, 6, 3, -8, 84, 54));
     numberList2.add(List.of(31, 14, 25, -26, 4, -45));
     numberList2.add(List.of(-18, 83, 24));
-
     System.out.println(collectionService.findMin(numberList2));
+
+    System.out.println(collectionService.sum(numberList));
 
 
   }
